@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Lado B — comida casera, rica y sana. Menú fijo y menú semanal.">
+<title>Lado B | Comida casera, rica y sana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#inicio" aria-label="Lado B">
+    <span class="logo-symbol">3</span><span>LADO B</span>
+  </a>
+  <button class="hamburger" aria-label="Abrir menú">☰</button>
+  <nav>
+    <a href="#menu-fijo">Menú fijo</a>
+    <a href="#menu-semanal">Menú semanal</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <!--
+      VIDEO:
+      Colocá tu video de presentación en assets/intro.mp4.
+      El sitio lo reproducirá automáticamente, en loop y sin sonido.
+      Si todavía no lo agregás, aparece esta portada animada.
+    -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="assets/intro.mp4" type="video/mp4">
+    </video>
+    <div class="video-fallback" aria-hidden="true">
+      <div class="grain"></div>
+      <div class="hero-logo">
+        <span class="hero-symbol">3</span>
+        <div>LADO B</div>
+        <small>COMIDA CASERA · RICA · SANA</small>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p>COMIDA CASERA · MONTEVIDEO</p>
+      <h1>LADO B</h1>
+      <span>Comida casera, rica y sana.</span>
+      <a class="scroll" href="#menu-fijo">BAJÁ PARA VER EL MENÚ <b>↓</b></a>
+    </div>
+  </section>
+
+  <section class="intro">
+    <p class="kicker">HECHO PARA VOS</p>
+    <h2>Comer rico todos los días<br><em>también puede ser fácil.</em></h2>
+    <p>Viandas caseras, abundantes y con opciones para todos los gustos.</p>
+  </section>
+
+  <section id="menu-fijo" class="menu-section green-section">
+    <div class="section-title light">
+      <p class="kicker">LADO B</p>
+      <h2>Menú fijo</h2>
+      <p>Elegí tu favorito y armalo a tu manera.</p>
+    </div>
+    <div class="menu-image-wrap">
+      <img src="assets/menu-fijo.jpg" alt="Menú fijo de Lado B" class="menu-image">
+    </div>
+  </section>
+
+  <section id="menu-semanal" class="menu-section">
+    <div class="section-title">
+      <p class="kicker">DE LUNES A VIERNES</p>
+      <h2>Menú semanal</h2>
+      <p>Opciones caseras para resolver la semana sin complicarte.</p>
+    </div>
+    <div class="menu-image-wrap paper">
+      <img src="assets/menu-semanal.jpg" alt="Menú semanal de Lado B" class="menu-image">
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-mark">3</div>
+    <div>
+      <p class="kicker">¿YA ELEGISTE?</p>
+      <h2>Tu almuerzo<br>está a un mensaje.</h2>
+    </div>
+    <a class="button" href="#contacto">Hacer mi pedido</a>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div>
+      <p class="kicker">CONTACTO</p>
+      <h2>Pedí tu menú.</h2>
+      <p>Tomamos pedidos hasta las <strong>9:00 hs del mismo día.</strong></p>
+    </div>
+    <div class="phones">
+      <span>WHATSAPP</span>
+      <a href="https://wa.me/59891671127" target="_blank" rel="noopener">091 671 127 ↗</a>
+      <a href="https://wa.me/59899727554" target="_blank" rel="noopener">099 727 554 ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo"><span class="logo-symbol">3</span> LADO B</div>
+  <span>Comida casera, rica y sana.</span>
+  <a href="#inicio">Volver arriba ↑</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

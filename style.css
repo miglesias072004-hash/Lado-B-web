@@ -1,0 +1,66 @@
+:root{
+  --green:#006b3c;
+  --green-dark:#004d2b;
+  --green-soft:#0a7a47;
+  --cream:#f7f3e9;
+  --white:#fffdf8;
+  --ink:#171a16;
+  --muted:#686d65;
+  --line:rgba(23,26,22,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",Arial,sans-serif;background:var(--white);color:var(--ink);line-height:1.5}
+a{text-decoration:none;color:inherit}
+.nav{height:74px;position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo,.footer-logo{display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:.13em}
+.logo-symbol{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:21px;font-weight:800}
+.nav nav{display:flex;gap:30px;font-size:14px;font-weight:700}.nav nav a:hover{color:var(--green)}
+.hamburger{display:none;border:0;background:none;font-size:25px}
+.hero{height:calc(100vh - 74px);min-height:590px;position:relative;overflow:hidden;background:var(--green-dark);display:grid;place-items:center;text-align:center;color:#fff}
+.hero-video{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;z-index:0}
+.hero-video:not([src=""]){opacity:1}
+.video-fallback{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#12814b 0,#006b3c 42%,#003d22 100%);overflow:hidden}
+.grain{position:absolute;inset:-50%;opacity:.13;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:6px 6px;animation:grain .25s steps(2) infinite}
+.hero-logo{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(55px,10vw,130px);letter-spacing:.08em;animation:rise 1.2s ease both}
+.hero-symbol{display:inline-grid;place-items:center;width:1em;height:1em;border:4px solid white;border-radius:50%;font-size:.55em;margin-right:.12em;vertical-align:13%}
+.hero-logo small{display:block;font-family:"DM Sans";font-size:12px;letter-spacing:.25em;font-weight:600;margin-top:18px}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.28))}
+.hero-content{position:relative;z-index:2;display:flex;align-items:center;flex-direction:column;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.hero-content p{font-size:11px;letter-spacing:.28em;font-weight:700;margin-bottom:18px}
+.hero-content h1{font:800 clamp(60px,11vw,150px)/.9 Manrope,sans-serif;letter-spacing:.06em}
+.hero-content span{font-size:18px;margin-top:18px}
+.scroll{margin-top:70px;font-size:11px;letter-spacing:.18em;font-weight:800;border:1px solid rgba(255,255,255,.5);padding:13px 18px;border-radius:999px;transition:.2s}.scroll:hover{background:#fff;color:var(--green)}
+.scroll b{margin-left:8px;font-size:15px}
+.intro{padding:110px 8vw 95px;text-align:center;background:var(--cream)}
+.kicker{font-size:10px;letter-spacing:.22em;font-weight:800;color:var(--green);margin-bottom:16px}
+.intro h2,.section-title h2,.cta h2,.contact h2{font-family:Manrope,sans-serif;font-size:clamp(38px,5.5vw,70px);line-height:1.02;letter-spacing:-.045em}
+.intro h2 em{font-style:normal;color:var(--green)}
+.intro>p:last-child{color:var(--muted);margin-top:22px;font-size:17px}
+.menu-section{padding:100px 7vw;background:var(--white)}
+.green-section{background:var(--green)}
+.section-title{max-width:850px;margin:0 auto 45px;text-align:center}.section-title p:last-child{color:var(--muted);margin-top:16px}.section-title.light{color:white}.section-title.light .kicker{color:#bde6ce}.section-title.light p:last-child{color:rgba(255,255,255,.78)}
+.menu-image-wrap{max-width:1050px;margin:auto;padding:12px;background:rgba(0,0,0,.08);border-radius:8px;box-shadow:0 25px 70px rgba(0,0,0,.17)}
+.green-section .menu-image-wrap{background:rgba(255,255,255,.18)}
+.menu-image-wrap.paper{background:#e8e4d8}
+.menu-image{display:block;width:100%;height:auto;border-radius:3px}
+.cta{padding:105px 9vw;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:45px;background:#e8eee7}
+.cta-mark{width:105px;height:105px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font:800 60px Manrope,sans-serif}
+.cta h2{font-size:clamp(38px,4.5vw,62px)}
+.button{background:var(--green);color:white;border-radius:999px;padding:16px 25px;font-weight:800;white-space:nowrap;transition:.2s}.button:hover{background:var(--green-dark);transform:translateY(-2px)}
+.contact{padding:105px 9vw;display:grid;grid-template-columns:1fr auto;gap:70px;align-items:center;background:var(--cream)}
+.contact h2{margin-bottom:22px}.contact>div>p:last-child{color:var(--muted);font-size:17px}
+.phones{display:flex;flex-direction:column;gap:5px;text-align:right}.phones span{font-size:10px;letter-spacing:.2em;font-weight:800;color:var(--green);margin-bottom:9px}.phones a{font:800 clamp(25px,3vw,40px) Manrope,sans-serif}.phones a:hover{color:var(--green)}
+footer{background:var(--green-dark);color:white;padding:30px 6vw;display:flex;align-items:center;justify-content:space-between;font-size:13px}footer a:hover{opacity:.7}
+.footer-logo{letter-spacing:.1em}.footer-logo .logo-symbol{background:white;color:var(--green)}
+@keyframes rise{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(3%,-2%)}50%{transform:translate(-2%,3%)}75%{transform:translate(2%,2%)}100%{transform:translate(-3%,-1%)}}
+@media(max-width:760px){
+  .nav{height:66px;padding:0 5vw}.nav nav{display:none}.hamburger{display:block}
+  .hero{min-height:600px;height:calc(100svh - 66px)}.hero-content h1{font-size:20vw}.scroll{margin-top:55px}
+  .intro,.menu-section,.contact{padding:75px 5vw}.intro h2{font-size:42px}
+  .menu-image-wrap{padding:6px}
+  .cta{padding:70px 7vw;grid-template-columns:1fr;gap:24px;text-align:center}.cta-mark{margin:auto;width:75px;height:75px;font-size:43px}.button{justify-self:center}
+  .contact{grid-template-columns:1fr;text-align:center}.phones{text-align:center}.phones a{font-size:29px}
+  footer{flex-direction:column;gap:13px;text-align:center}
+}
